@@ -2,7 +2,7 @@
 
 import os
 import webbrowser
-import  subprocess
+import  subprocess, time
 options="""
 Press  1  to  start your default web browser :- 
 Press  2  to  check your internet connection speed :- 
@@ -23,24 +23,43 @@ print("you have entered  "+choice)
 #  conditional statements
 if choice == '1' :
 	#open default webbrowser
-    webbrowser.open_new_tab('https://www.google.com')
+    	webbrowser.open_new_tab('https://www.google.com')
 elif choice == '2':
+	#check internet speed
 	os.system("ping -c 5 google.com")
 elif choice == '3' :
-    output=subprocess.getstatusoutput('ping -c 2 google.com')
-    if output[0] == 0:
-        print("Your Internet is working fine")
-    else:
-        print("Your internet is not working")
+	#check internet status
+    	output=subprocess.getstatusoutput('ping -c 2 google.com')
+    	if output[0] == 0:
+        	print("Your Internet is working fine")
+    	else:
+        	print("Your internet is not working")
 elif  choice  ==  '4'  :
+	#check date and time
 	print("current time is ",subprocess.getoutput("date +%T"))
+elif choice == '5':
+	#will show the current city temperature in default browser
+	webbrowser.open_new_tab('https://www.google.com/search?q=current temperature')
+elif choice == '6':
+	#will shoe the public ip 
+	os.system("curl ifconfig.me")
 elif choice == '7':
-    dir_name=input("Enter name of the directory")
-    dir_output=subprocess.getstatusoutput("mkdir "+dir_name)
-    if dir_output[0] == 0:
-        print("Your directory "+dir_name+"successfully created")
-    else:
-        print("Change your directory name")
+	#it will make a directory in current location
+    	dir_name=input("Enter name of the directory:-")
+    	dir_output=subprocess.getstatusoutput("mkdir "+dir_name)
+    	if dir_output[0] == 0:
+        	print("Your directory "+dir_name+" successfully created")
+    	else:
+        	print("Change your directory name")
+elif choice == '8':
+	#will reboot the system
+	os.system("reboot")
+elif choice == '9':
+	#will play a song in youtube
+	webbrowser.open_new_tab('https://www.youtube.com/watch?v=c--HfBqyPOs')
 elif choice == '10':
-    msg=input("Please enter your message:-")
-    webbrowser.open_new_tab('https://www.google.com/search?q='+msg)
+	#will search google according to user
+	msg=input("Please enter your message:-")
+	print ("Please wait for 1 sec:")
+	time.sleep(1)
+	webbrowser.open_new_tab('https://www.google.com/search?q='+msg)
