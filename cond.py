@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import os
+import webbrowser
 import  subprocess
 options="""
 Press  1  to  start your default web browser :- 
@@ -21,10 +22,25 @@ choice=input()
 print("you have entered  "+choice)
 #  conditional statements
 if choice == '1' :
-	os.system("google-chrome")
-if choice == '2':
-	os.system("ping google.com")
-if  choice  ==  '4'  :
+	#open default webbrowser
+    webbrowser.open_new_tab('https://www.google.com')
+elif choice == '2':
+	os.system("ping -c 5 google.com")
+elif choice == '3' :
+    output=subprocess.getstatusoutput('ping -c 2 google.com')
+    if output[0] == 0:
+        print("Your Internet is working fine")
+    else:
+        print("Your internet is not working")
+elif  choice  ==  '4'  :
 	print("current time is ",subprocess.getoutput("date +%T"))
-else :
-	print("wrong option")
+elif choice == '7':
+    dir_name=input("Enter name of the directory")
+    dir_output=subprocess.getstatusoutput("mkdir "+dir_name)
+    if dir_output[0] == 0:
+        print("Your directory "+dir_name+"successfully created")
+    else:
+        print("Change your directory name")
+elif choice == '10':
+    msg=input("Please enter your message:-")
+    webbrowser.open_new_tab('https://www.google.com/search?q='+msg)
