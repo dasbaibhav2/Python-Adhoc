@@ -19,8 +19,8 @@ language = 'en'
 myobj = gTTS(text=a, lang=language, slow=False) 
 
 # Saving the converted audio in a mp3 file named welcome 
-myobj.save("welcome.mp3") 
+myobj.save("result.mp3") 
 
 # Playing the converted file 
 #install mpg321 using sudo apt install mpg321
-os.system("mpg321 welcome.mp3") 
+os.system("mpg321 result.mp3") 
