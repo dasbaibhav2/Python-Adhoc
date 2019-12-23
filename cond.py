@@ -53,6 +53,8 @@ elif choice == '7':
         	print("Change your directory name")
 elif choice == '8':
 	#will reboot the system
+	print("THE SYSTEM WILL NOW REBOOT")
+	time.sleep(5)
 	os.system("reboot")
 elif choice == '9':
 	#will play a song in youtube

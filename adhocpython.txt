@@ -1,0 +1,20 @@
+LIST
+In a List when you want to remove a value you can use a.remove(100) or a.pop(100), Both are same.
+
+
+
+DICTIONARY
+keys should be unique in a dictionary. When you want to search you can't use indexing. You have to search using keys.
+a.keys()
+It will print all the keys in a dictionary.
+a.values()
+It will print all the values in a dictionary.
+When you want to append in a dictionary you can write using a['c']="hello"
+If you want to replace in a dictionary use a['c']="Bye"
+
+
+
+
+SET
+Set will remove duplicacy.
+You can write set in a={1,2,3,4,"X"}
