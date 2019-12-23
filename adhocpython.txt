@@ -18,3 +18,23 @@ If you want to replace in a dictionary use a['c']="Bye"
 SET
 Set will remove duplicacy.
 You can write set in a={1,2,3,4,"X"}
+
+
+FOR LOOP
+When you want to find any module using dir
+
+import sys
+for i in dir(sys):
+	if 'ar' in i:
+		print(i)
+
+
+When you forget what list tupple or dictionary work on you can call them by
+list()
+tuple()
+dict()
+
+How to print the upper loop code in a list?
+-->  [i for i in dir(sys) if 'ar' in i]
+
+
