@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+
+import os.path
+import sys,subprocess
+fn=sys.argv[1:]
+
+for i in fn:
+    if os.path.isfile(i):
+        print("FILE EXISTS CANNOT CREATE ",i)
+
+    else:
+        f=open(i,'w')
+        f.close()
+        print("FILE CREATED")
