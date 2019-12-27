@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import os.path
-import sys,subprocess
+import sys
 fn=sys.argv[1:]
 
 for i in fn:
