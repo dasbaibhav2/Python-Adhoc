@@ -6,9 +6,10 @@ fn=sys.argv[1:]
 
 for i in fn:
     if os.path.isfile(i):
-        print("FILE EXISTS CANNOT CREATE ",i)
+        f=open(i,'a+')
+        f.close()
 
     else:
         f=open(i,'w')
         f.close()
-        print("FILE CREATED")
+        
