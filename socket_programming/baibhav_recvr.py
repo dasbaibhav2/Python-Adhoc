@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import   socket,time,subprocess,pyttsx3
 target_ip="192.168.43.63"
 target_port=1233
