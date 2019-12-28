@@ -2,12 +2,12 @@
 
 import os.path
 import sys
+import os
 fn=sys.argv[1:]
 
 for i in fn:
     if os.path.isfile(i):
-        f=open(i,'a+')
-        f.close()
+        os.rename(i,i)
 
     else:
         f=open(i,'w')
